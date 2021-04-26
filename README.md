@@ -1,2 +1,3 @@
 # gold-dicker
-blockchain
+npm install
+node tokenholdings.js 0x..........
