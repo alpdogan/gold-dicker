@@ -37,3 +37,8 @@ Symbol	Quantity
 - Holderlarin walletlarina girip alinacak data (Token Name,	Symbol	Quantity,	Token Price,	Value in BNB,	  Value in USD)
 
 
+Token yaratılış tarihi
+https://bscscan.com/token/0xf7844cb890f4c339c497aeab599abdc3c874b67a#balances
+Profile Summary / Contract : https://bscscan.com/address/0xf7844cb890f4c339c497aeab599abdc3c874b67a
+More Info / ContractCreator txn : https://bscscan.com/tx/0x6bdbf3f19ddd1b3feb3ba12f2e7321e7df5a1475e8f676464991f4cc36e6d2e4
+ 
