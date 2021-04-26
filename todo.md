@@ -33,7 +33,7 @@ Symbol	Quantity
 
 # GetTokenHolders (https://bscscan.com/token/{0}#balances, tokenContractId)
 - Token'daki yüksek holderların "Rank, Address, Quantity, Percentage,	Value" columnlarını alıp db ye anlık tarihe göre kayıt edecek.
-# GetTokenHoldersWallet (https://bscscan.com/token/{0}?a={1}, tokenContractId, walletContractId)
+# GetTokenHoldersWallet (https://bscscan.com/tokenholdings?a={0}, walletContractId)
 - Holderlarin walletlarina girip alinacak data (Token Name,	Symbol	Quantity,	Token Price,	Value in BNB,	  Value in USD)
 
 
