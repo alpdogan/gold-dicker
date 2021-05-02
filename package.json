@@ -4,13 +4,15 @@
   "description": "",
   "main": "browser.js",
   "scripts": {
-    "heroku-postbuild": "npm build ./client-app",
+    "heroku-postbuild": "npm run build",
+    "build": "./build.sh",
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "poor developer",
   "license": "MIT",
   "dependencies": {
+    "client-app": "file:client-app",
     "express": "^4.17.1",
     "morgan": "^1.10.0",
     "puppeteer": "^9.0.0"
