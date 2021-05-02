@@ -30,6 +30,9 @@ Token Name
 Symbol	Quantity	
 )
 
+https://lookup.icann.org/lookup
+Domainlere buradan bakılmalı eğer host edilen yerde cok ucuz fiyat ve btc ile ödeme mevcut ise scam olarak değerlendirilmeli.
+
 
 # GetTokenHolders (https://bscscan.com/token/{0}#balances, tokenContractId)
 - Token'daki yüksek holderların "Rank, Address, Quantity, Percentage,	Value" columnlarını alıp db ye anlık tarihe göre kayıt edecek.
