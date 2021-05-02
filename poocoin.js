@@ -1,6 +1,6 @@
 
 setInterval(() => {
-    var trackPage = "http://localhost:3000/txtrack/";
+    var trackPage = "http://localhost:5000/txtrack/";
 
     var trackLinks = [...document.querySelectorAll(".ReactVirtualized__Table__rowColumn.table-col-wrap")];
     trackLinks.map((track) => { 
@@ -13,7 +13,6 @@ setInterval(() => {
         .filter(p => p !== null)
         .map((link) => {
             var bscscan = [...link.children][0].href;
-            console.log(bscscan);
             tx = bscscan.replace('https://bscscan.com/tx/', '');
             tx = tx.replace(trackPage, '');
             [...link.children][0].href = trackPage + tx;

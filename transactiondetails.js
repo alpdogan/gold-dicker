@@ -6,11 +6,16 @@ const txFetcher = async (tx) => {
             const [page] = await browser.pages();
         
             var txUrl = `https://bscscan.com/tx/${tx}`;
-            
+
             await page.goto(txUrl, { waitUntil: 'networkidle0' });
             const result = await page.evaluate(() => {
-                var from = document.querySelector("#addressCopy").innerText;
-                return from;
+                try{
+                    var from = document.querySelector("#addressCopy").innerText;
+                    return from;
+                }catch(ex){
+                    return "";
+                }
+
             });
         
             await browser.close();

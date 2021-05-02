@@ -1,9 +1,14 @@
 const express = require('express')
+
+
 const path = require('path');
 var morgan = require('morgan')
-
+var apicache = require('apicache')
+var cache = apicache.middleware
 
 const app = express()
+
+
 const port = process.env.PORT || 5000;
 const hodlFetcher = require('./tokenholdings');
 const txFetcher = require('./transactiondetails');
@@ -11,6 +16,7 @@ const txFetcher = require('./transactiondetails');
 
 app.use(morgan(":method :url :status :response-time ms - :res[content-length]"));
 app.use(express.static(path.join(__dirname, './client-app/build')));
+app.use(cache('30 minutes'))
 
 
 app.get('/', (req, res) => {

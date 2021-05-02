@@ -1,14 +1,11 @@
 const puppeteer = require('puppeteer');
 
-var token = process.argv.slice(2);
-console.log("fetching tokenholdings", token);
-
 const hodlFetcher = async (token) => {
     try {
             const browser = await puppeteer.launch();
             const [page] = await browser.pages();
         
-            var tokenHoldingsUrl = `https://bscscan.com/tokenholdings?a=${token}&ps=25&sort=quantity&order=desc`;
+            var tokenHoldingsUrl = `https://bscscan.com/tokenholdings?a=${token}&ps=100&sort=total_price_usd&order=desc`;
             console.log(tokenHoldingsUrl);
         
             await page.goto(tokenHoldingsUrl, { waitUntil: 'networkidle0' });
