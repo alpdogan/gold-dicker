@@ -4,7 +4,7 @@ var morgan = require('morgan')
 
 
 const app = express()
-const port = 5000
+const port = process.env.PORT || 5000;
 const hodlFetcher = require('./tokenholdings');
 const txFetcher = require('./transactiondetails');
 
@@ -18,6 +18,10 @@ app.get('/', (req, res) => {
 })
 
 app.get('/txtrack/:tx', (req, res) => {
+    res.sendFile(path.join(__dirname + '/client-app/build/index.html'));
+})
+
+app.get('/wlttrack/:wallet', (req, res) => {
     res.sendFile(path.join(__dirname + '/client-app/build/index.html'));
 })
 

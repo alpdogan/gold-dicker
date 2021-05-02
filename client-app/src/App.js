@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Home from './pages/home';
 import TxTrack from './pages/txTrack';
+import WalletTrack from './pages/txTrack';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route exact path="/txtrack/:tx" component={TxTrack}/>
+            <Route exact path="/wlttrack/:wallet" component={WalletTrack}/>
             <Route component={Home}/>
           </Switch>
         </BrowserRouter>

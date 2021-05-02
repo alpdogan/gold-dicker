@@ -46,18 +46,19 @@
 }
 
 
-.txid {
+.trackid {
   font-size: 40px;
   width: 70%;
 }
 
-.txtrack{
+.trackbtn{
   width: 20%;
   background: #6dc71d;
-  border: 0;
+  border: 1px solid black;
   font-size: 24px;
+  cursor: pointer;
 }
 
 .holdings {
-  font-size: 14px;;
+  font-size: 14px;
 }

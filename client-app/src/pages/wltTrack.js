@@ -1,14 +1,23 @@
 
 import React, { useEffect, useState } from "react";
 
-const WalletTrack = (props) => {
-    const { wallet } = props.match.params; 
+const TxTrack = (props) => {
+    const { tx } = props.match.params; 
+    const [txWallet, setTxWallet] = useState("");
     const [tokenHoldings, setTokenHoldings] = useState([]);
 
     useEffect(() => {
+        if(txWallet.length === 0){
+            fetch(`/api/tx/${tx}`)
+            .then((response) => response.json())
+            .then((response) => {
+                console.log("txWallet", response);
+                setTxWallet(response.contractToken);
+            });
+        }
 
-        if(tokenHoldings.length === 0 && wallet.length > 0){
-            fetch(`/api/tokenholdings/${wallet}`)
+        if(tokenHoldings.length === 0 && txWallet.length > 0){
+            fetch(`/api/tokenholdings/${txWallet}`)
             .then((response) => response.json())
             .then((response) => {
                 console.log("tokenHoldings", response);
@@ -17,7 +26,8 @@ const WalletTrack = (props) => {
         }
     })
     return (<React.Fragment>
-            <h5>wlt${wallet ? wallet : "loading..."}</h5>
+            <h5>tx${tx}</h5>
+            <h5>wlt${txWallet ? txWallet : "loading..."}</h5>
             <table className="holdings">
                 <tr>
                     <td>symbol</td>
@@ -41,4 +51,4 @@ const WalletTrack = (props) => {
           </React.Fragment>);
   }   
   
-export default WalletTrack;
+export default TxTrack;
