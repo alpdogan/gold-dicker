@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Home from './pages/home';
 import TxTrack from './pages/txTrack';
-import WalletTrack from './pages/txTrack';
+import WalletTrack from './pages/wltTrack';
 
 
 function App() {
