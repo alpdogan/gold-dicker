@@ -1,4 +1,4 @@
-
+//tracking live transactions
 setInterval(() => {
     var trackPage = "http://localhost:5000/txtrack/";
 
@@ -19,3 +19,9 @@ setInterval(() => {
     }
     )
 }, 1000);
+
+
+
+//expand wallet scroll
+
+document.querySelectorAll("div.d-block div.mt-2 div.h-100")[0].parentElement.style.height = '2000px'
