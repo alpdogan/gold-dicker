@@ -6,7 +6,9 @@ npm install
 # run
 node tokenholdings.js 0x..........
 
-# js injection
+
+
+# js injection
 
 ![alt text](https://raw.githubusercontent.com/alpdogan/gold-dicker/main/javascript-injector.png)
 
